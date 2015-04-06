@@ -379,6 +379,15 @@ boolean APIClient::request(char* endpoint, String buffer, boolean put) {
 
   client.print(F("API_CLIENT: "));
   client.println(F("ArduinoRC 1.0"));
+
+  client.print(F("PUBLIC-KEY: "));
+  client.println(publicKey);
+  
+  client.print(F("PRIVATE-KEY: "));
+  client.println(privateKey);
+
+  client.print(F("API-CLIENT: "));
+  client.println(F("ArduinoRC 1.0"));
   
   client.println(F("Accept: application/json"));
   
